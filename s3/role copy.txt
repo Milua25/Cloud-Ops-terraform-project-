@@ -1,0 +1,21 @@
+
+# Create an IAM role
+resource "aws_iam_role" "s3-account2-role" {
+name        = "s3-account-2-role"
+description = "role to get direct access to s3"
+assume_role_policy = "${file("./s3/s3-policy.json")}"
+
+tags = {
+stack = "S3-direct-access-Role"
+}
+}
+
+resource "aws_iam_role_policy_attachment" "s3-full-access-policy" {
+role       = aws_iam_role.s3-account2-role.name
+policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+
+}
+
+output "s3-iam-role-account-2" {
+  value = aws_iam_role.s3-account2-role.arn
+}
