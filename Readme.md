@@ -1,11 +1,11 @@
 # Important Note To Execute this script
 
 ## Step-01: Manually Create an S3 bucket for storing statefile
-- First create an s3 bucket where you want to store the state file and change the values in the backend configuration
+- First create an s3 bucket where you want to store the statefile and change the values in the backend configuration
 
 ## Step-02: Introduction
 
-- Create environmental variables for access key and secret access key for both Account 1 and Account 2
+- Create environmental variables for both access key and secret access key for Account 1 and Account 2
 
 Example:
 export TF_VAR_ACCESS_KEY_ID_1 = XXXXXXXXXXXXX

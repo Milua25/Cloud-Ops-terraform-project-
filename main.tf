@@ -3,6 +3,7 @@ module "s3" {
   source = "./s3"
   s3-bucket-name = var.aws_s3_bucket 
   account_id = var.account_1_id 
+  
   providers = {
     aws = aws.Account-2
   }
